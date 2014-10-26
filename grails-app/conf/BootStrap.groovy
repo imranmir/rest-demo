@@ -1,5 +1,6 @@
 import com.im.demo.Manufecturer
 import com.im.demo.Phone
+import com.im.demo.User
 import com.im.demo.Variation
 import grails.converters.JSON
 
@@ -13,6 +14,7 @@ class BootStrap {
         println "Manufecture count "+Manufecturer.count
         println "Phone count "+Phone.count
         println "Variation count "+Variation.count
+        println "User count "+User.count
 
     }
 
@@ -40,6 +42,10 @@ class BootStrap {
 
         Variation mini2 = new Variation(phone: note1, variation: "samsung note1 mini",type: 'model').save(flush: true)
         Variation large2 = new Variation(phone: note1, variation: "samsung note1 large",type: 'model').save(flush: true)
+
+        new User (firstName: 'apple', lastName: 'delicious', age: 2, password: 'pwd', email: 'apple@gmail.com').save(flush: true)
+        new User (firstName: 'orange', lastName: 'sour', age: 1, password: 'pwd', email: 'orange@gmail.com').save(flush: true)
+        new User (firstName: 'peach', lastName: 'sweet', age: 1, password: 'pwd', email: 'peach@gmail.com').save(flush: true)
 
     }
 

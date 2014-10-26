@@ -6,7 +6,8 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-//        "/manufecturers"(resources: 'manufecturer')   //todo
+        "/v1/phones"(resources: 'phone', namespace: 'v1')
+        "/v2/phones"(resources: 'phone', namespace: 'v2')
         "/"(view:"/index")
         "500"(view:'/error')
 	}
